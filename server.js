@@ -33,7 +33,9 @@ app.use((err, _, res, __) => {
     message: err.message || "Something went wrong, please try again.",
   });
 });
-
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
 app.listen(PORT, function (err) {
   if (err) console.log("Error in server setup");
   console.log("Server listening on Port", PORT);
